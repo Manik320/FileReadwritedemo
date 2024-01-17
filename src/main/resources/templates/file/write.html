@@ -1,0 +1,17 @@
+<!-- src/main/resources/templates/file/write.html -->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Write File</title>
+</head>
+<body>
+    <h1>Write to File</h1>
+    <form th:action="@{/files/write}" th:object="${fileContent}" method="post">
+        <label for="content">Content:</label>
+        <textarea id="content" name="content" th:field="*{content}" rows="5"></textarea>
+        <br>
+        <button type="submit">Write to File</button>
+    </form>
+</body>
+</html>
